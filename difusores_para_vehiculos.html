@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difusores para Vehículos - Detalles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de detalles del producto (reutilizados y ajustados) */
+        .product-detail-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .product-image-column {
+            flex: 1;
+            min-width: 300px; /* Asegura un ancho mínimo para la columna de imagen */
+            padding-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea la imagen en la parte superior */
+        }
+
+        .product-image-column img {
+            max-width: 100%; /* La imagen ocupa todo el ancho de su columna */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info-column {
+            flex: 1;
+            min-width: 300px; /* Asegura un ancho mínimo para la columna de info */
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .product-info-column h2 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 15px;
+            text-align: left; /* Alinea el título a la izquierda */
+        }
+
+        .product-info-column p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-align: left; /* Alinea el párrafo a la izquierda */
+        }
+
+        .aroma-list-container {
+            margin-top: 20px;
+        }
+
+        .aroma-list-container h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left; /* Alinea el subtítulo a la izquierda */
+        }
+
+        .aroma-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas para la lista */
+            gap: 10px;
+        }
+
+        .aroma-list li {
+            background-color: #f0f8ff;
+            border: 1px solid #cceeff;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 1em;
+            color: #333;
+            text-align: left;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Media query para hacerlo responsive */
+        @media (max-width: 768px) {
+            .product-detail-container {
+                flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+            }
+            .product-image-column {
+                padding-right: 0;
+                margin-bottom: 20px;
+                align-items: center; /* Centra la imagen en pantallas pequeñas */
+            }
+            .product-info-column {
+                padding-left: 0;
+            }
+            .aroma-list {
+                grid-template-columns: 1fr; /* Una columna para la lista en pantallas pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Mi Tienda</a>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="main-content-wrapper">
+        <div class="product-detail-container">
+            <div class="product-image-column">
+                <img src="imagenes_absoluto/difusotes_auto.jpg" alt="Imagen completa de Difusores para Vehículos">
+            </div>
+            <div class="product-info-column">
+                <h2>Difusores para Vehículos</h2>
+                <p>Nuestros difusores para vehículos son la solución perfecta para mantener tu auto con un aroma fresco y agradable en todo momento. Prácticos y fáciles de usar, te permiten disfrutar de tus fragancias favoritas mientras viajas, convirtiendo cada trayecto en una experiencia placentera. ¡Un toque de aroma para tu camino!</p>
+
+                <div class="aroma-list-container">
+                    <h3>Aromas Disponibles:</h3>
+                    <ul class="aroma-list">
+                        <li>Limón</li>
+                        <li>Naranja</li>
+                        <li>Naranja Pimienta</li>
+                        <li>Vainicoco</li>
+                        <li>Fresias</li>
+                        <li>Corona (perfume de vainilla)</li>
+                        <li>Ralph (perfume notas de flores blancas)</li>
+                        <li>Lavanda</li>
+                        <li>Rosas con Jazmín natural</li>
+                        <li>Cedrón</li>
+                        <li>Manzana con Canela</li>
+                        <li>Sándalo Clásico</li>
+                        <li>Coniglio Símil</li>
+                        <li>Tilo</li>
+                        <li>Durazno con Maracuyá</li>
+                        <li>Verbena</li>
+                        <li>Blue Seduction Símil</li>
+                        <li>Nag Champa</li>
+                        <li>Te Verde</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mi Tienda de Productos. Todos los derechos reservados.</p>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Opcional: Cierra el menú si se hace clic fuera de él
+            document.addEventListener('click', function(event) {
+                if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Opcional: Cierra el menú si se redimensiona a un tamaño de escritorio
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
+</body>
+</html>

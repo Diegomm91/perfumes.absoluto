@@ -1,0 +1,726 @@
+/* Estilos Generales y Reset */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Color de texto predeterminado negro/oscuro */
+
+    /* *** Fondo de imagen fijo para TODA la página *** */
+    background-image: url('imagenes_absoluto/imagen_fondo.jpg'); /* ¡IMPORTANTE! Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* ¡Esto hace que la imagen de fondo sea fija! */
+    background-color: #f0f0f0; /* Color de fallback si la imagen no carga o no se ve bien */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio extra bajo las imágenes */
+}
+
+/* Estilos para la Barra de Navegación */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.9); /* Un poco de transparencia para que se vea la imagen de fondo */
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 30px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Menú de hamburguesa (oculto por defecto en desktop) */
+.menu-toggle {
+    display: none; /* Se mostrará solo en móvil */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px; /* Un poco de padding para hacer el clic más fácil */
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+
+/* Estilos del Contenedor Principal de Contenido (el bloque blanco) */
+.main-content-wrapper {
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con una ligera transparencia */
+    max-width: 1200px;
+    margin: 30px auto; /* Centra el bloque y añade espacio arriba/abajo */
+    padding: 40px 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra para que el bloque resalte */
+    border-radius: 8px;
+    min-height: calc(100vh - 150px); /* Asegura que tenga altura mínima para ver la imagen de fondo */
+    box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
+    position: relative; /* Para asegurar que el z-index funcione */
+    z-index: 5; /* Asegura que esté por encima de la imagen de fondo */
+}
+
+
+/* SECCIONES DENTRO DEL CONTENIDO PRINCIPAL */
+.content-section, .contact-section {
+    padding: 20px 0; /* Ajusta el padding interno si es necesario */
+    margin-bottom: 20px; /* Espacio entre secciones dentro del bloque blanco */
+    color: #333; /* Asegura que el texto dentro de estos bloques sea oscuro */
+}
+
+.content-section h2, .contact-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007bff; /* Título en azul */
+}
+
+.content-section p, .contact-section p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444; /* Texto de párrafo un poco más claro */
+}
+
+/* Estilos del Hero Section (Solo para index.html) */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Color del texto sobre la imagen de fondo */
+    position: relative;
+    z-index: 1; /* Bajo el navbar */
+    padding-top: 70px; /* Para que el contenido no quede debajo del navbar fijo */
+    box-sizing: border-box;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura semitransparente para legibilidad */
+    z-index: -1;
+}
+
+.hero-content {
+    padding: 20px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Grid de Productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #ffffff; /* Fondo blanco para cada item de producto */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Para flexbox en la columna */
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: auto; /* Centrar imagen */
+    margin-right: auto; /* Centrar imagen */
+}
+
+.product-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
+}
+
+.buy-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Para que sea un botón inline-block */
+    text-decoration: none; /* Asegurar que no tenga subrayado */
+}
+
+.buy-btn:hover {
+    background-color: #218838;
+}
+
+/* Sección de Contacto */
+.contact-methods {
+    margin-bottom: 50px;
+}
+
+.contact-methods ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-methods li {
+    background-color: #ffffff; /* Cada método de contacto tendrá fondo blanco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+
+.contact-methods li:hover {
+    background-color: #f0f0f0; /* Un gris muy claro al pasar el ratón */
+}
+
+.contact-methods a {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-methods a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.contact-form-container {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.contact-form-container h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007bff;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Resta el padding para el ancho total */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.form-note {
+    font-size: 0.85em;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Pie de Página */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(51, 51, 51, 0.9); /* Un poco de transparencia para el footer también */
+    color: white;
+    font-size: 0.9em;
+    margin-top: 30px;
+    position: relative; /* Asegura que el footer esté encima de la imagen de fondo si es necesario */
+    z-index: 5;
+}
+
+/* ************ Estilos para Páginas de Detalle de Producto ************ */
+/* Estos estilos estaban previamente inlined en cada HTML de detalle, ahora son globales */
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Sigue la estética del main-content-wrapper */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 6; /* Un poco más alto que main-content-wrapper si se usa fuera de él */
+}
+
+.product-image-column {
+    flex: 1;
+    min-width: 300px; /* Asegura un ancho mínimo para la columna de imagen */
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea la imagen en la parte superior */
+}
+
+.product-image-column img {
+    max-width: 100%; /* La imagen ocupa todo el ancho de su columna */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-info-column {
+    flex: 1;
+    min-width: 300px; /* Asegura un ancho mínimo para la columna de info */
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-info-column h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+.product-info-column p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: left; /* Alinea el párrafo a la izquierda */
+}
+
+/* Estilos específicos para lista de aromas (Perfumes Imitaciones) */
+.aroma-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.aroma-category {
+    flex: 1;
+    min-width: 280px;
+}
+
+.aroma-category h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.aroma-list {
+    list-style: none;
+    padding: 0;
+}
+
+.aroma-list li {
+    background-color: #f0f8ff;
+    border: 1px solid #cceeff;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-box {
+    background-color: #fff3cd; /* Color de advertencia o información */
+    border: 1px solid #ffeeba;
+    border-left: 5px solid #ffc107;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #664d03;
+    font-size: 1em;
+    text-align: left;
+}
+
+/* ************ Media Queries para Responsividad ************ */
+
+/* Para tabletas y escritorios más pequeños (hasta 992px de ancho) */
+@media (max-width: 992px) {
+    .navbar .nav-links li {
+        margin-left: 20px; /* Reducir un poco el espacio entre enlaces */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Ajustar el tamaño del título del héroe */
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas un poco más pequeñas */
+        gap: 20px;
+    }
+
+    .product-item img {
+        height: 160px; /* Ajustar altura de la imagen en tablet */
+    }
+
+    /* Ajustes para las columnas de detalle de producto */
+    .product-image-column, .product-info-column {
+        min-width: unset; /* Permitir que se ajuste libremente */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Para dispositivos móviles (hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: row; /* Mantener logo y toggle en fila */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Asegurar que el contenedor ocupe todo el ancho */
+        padding: 0 15px; /* Ajustar padding del container de la navbar */
+    }
+
+    .navbar .nav-links {
+        display: none; /* Oculta los enlaces de navegación por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.95); /* Fondo para el menú desplegable, un poco más oscuro */
+        position: absolute;
+        top: 60px; /* Debajo de la barra de navegación */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .navbar .nav-links.active {
+        display: flex; /* Muestra los enlaces cuando el menú está activo */
+    }
+
+    .navbar .nav-links li {
+        margin: 0; /* Quitar márgenes laterales */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .nav-links a {
+        display: block; /* Hacer que el enlace ocupe todo el ancho del li */
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.05); /* Separador suave */
+    }
+    .navbar .nav-links li:last-child a {
+        border-bottom: none; /* No poner borde en el último elemento */
+    }
+
+    .menu-toggle {
+        display: flex; /* Muestra el icono de hamburguesa */
+        /* position: absolute; Ya no es necesario si flex-direction: row en container */
+        /* right: 20px; top: 20px; */
+    }
+
+    .hero-section {
+        padding-top: 60px; /* Ajustar si el navbar es más pequeño */
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .main-content-wrapper {
+        margin: 20px 10px; /* Márgenes más pequeños en móvil */
+        padding: 30px 15px; /* Padding interno más pequeño */
+    }
+    
+    .content-section h2, .contact-section h2 {
+        font-size: 2em; /* Títulos de sección más pequeños */
+    }
+    .content-section p, .contact-section p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        gap: 15px; /* Menos espacio entre productos */
+    }
+
+    .product-item {
+        padding: 15px;
+    }
+
+    .product-item img {
+        height: 180px; /* Altura de imagen adecuada para una sola columna */
+    }
+
+    .product-item h3 {
+        font-size: 1.3em;
+    }
+
+    .product-item p {
+        font-size: 0.9em;
+    }
+
+    .buy-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .contact-methods ul {
+        flex-direction: column; /* Apilar métodos de contacto */
+        align-items: center;
+    }
+
+    .contact-form-container {
+        padding: 20px; /* Menos padding para el formulario */
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: calc(100% - 20px); /* Ajuste por el padding */
+    }
+
+    /* Estilos para páginas de detalle de producto en móvil */
+    .product-detail-container {
+        flex-direction: column; /* Apila las columnas */
+        padding: 15px;
+        margin: 20px 10px; /* Ajustar márgenes para móvil */
+    }
+    .product-image-column {
+        padding-right: 0;
+        margin-bottom: 20px;
+        align-items: center; /* Centrar la imagen */
+    }
+    .product-info-column {
+        padding-left: 0;
+    }
+    .product-info-column h2 {
+        font-size: 2em;
+        text-align: center; /* Centrar título en móvil */
+    }
+    .product-info-column p {
+        font-size: 1em;
+        text-align: center; /* Centrar texto en móvil */
+    }
+    .aroma-categories {
+        flex-direction: column; /* Apila las categorías de aromas */
+    }
+    .aroma-category {
+        min-width: unset;
+        width: 100%;
+    }
+    .info-box {
+        font-size: 0.9em;
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.85em;
+    }
+}
+
+/* Para dispositivos muy pequeños (ej. iPhone 5/SE, hasta 480px) */
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 1.5em;
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    .content-section h2, .contact-section h2 {
+        font-size: 1.8em;
+    }
+    .product-item img {
+        height: 150px;
+    }
+    .product-item h3 {
+        font-size: 1.2em;
+    }
+    .product-item p {
+        font-size: 0.85em;
+    }
+    .buy-btn {
+        padding: 7px 12px;
+        font-size: 0.85em;
+    }
+    .product-detail-container {
+        padding: 10px;
+    }
+    .product-info-column h2 {
+        font-size: 1.6em;
+    }
+    .product-info-column p {
+        font-size: 0.9em;
+    }
+    .aroma-category h3 {
+        font-size: 1.5em;
+    }
+    .aroma-list li {
+        font-size: 0.9em;
+    }
+    .contact-form-container h3 {
+        font-size: 1.6em;
+    }
+    .submit-btn {
+        font-size: 1em;
+        padding: 10px;
+    }
+}

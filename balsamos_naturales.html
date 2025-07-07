@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bálsamos Naturales - Detalles</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de detalles del producto (reutilizados y ajustados) */
+        .product-detail-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .product-image-column {
+            flex: 1;
+            min-width: 300px; /* Asegura un ancho mínimo para la columna de imagen */
+            padding-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea la imagen en la parte superior */
+        }
+
+        .product-image-column img {
+            max-width: 100%; /* La imagen ocupa todo el ancho de su columna */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info-column {
+            flex: 1;
+            min-width: 300px; /* Asegura un ancho mínimo para la columna de info */
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .product-info-column h2 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 15px;
+            text-align: left; /* Alinea el título a la izquierda */
+        }
+
+        .product-info-column p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-align: left; /* Alinea el párrafo a la izquierda */
+        }
+
+        .aroma-list-container {
+            margin-top: 20px;
+        }
+
+        .aroma-list-container h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: left; /* Alinea el subtítulo a la izquierda */
+        }
+
+        /* Estilos específicos para la lista de tipos de bálsamos */
+        .balsam-types {
+            list-style: none;
+            padding: 0;
+        }
+
+        .balsam-types li {
+            margin-bottom: 20px; /* Espacio entre cada tipo de bálsamo */
+            background-color: #f0f8ff;
+            border: 1px solid #cceeff;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .balsam-types li h4 {
+            font-size: 1.4em;
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .balsam-types li p {
+            font-size: 1em;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .balsam-types li ul {
+            list-style: disc; /* Puntos para los componentes */
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        .balsam-types li ul li {
+            background-color: transparent; /* Anula el fondo del li principal */
+            border: none;
+            box-shadow: none;
+            padding: 2px 0;
+            font-size: 0.95em;
+            color: #666;
+        }
+
+
+        /* Media query para hacerlo responsive */
+        @media (max-width: 768px) {
+            .product-detail-container {
+                flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+            }
+            .product-image-column {
+                padding-right: 0;
+                margin-bottom: 20px;
+                align-items: center; /* Centra la imagen en pantallas pequeñas */
+            }
+            .product-info-column {
+                padding-left: 0;
+            }
+            /* Ajustes para las listas en pantallas pequeñas si fuera necesario */
+            .balsam-types li {
+                padding: 10px;
+            }
+            .balsam-types li h4 {
+                font-size: 1.2em;
+            }
+            .balsam-types li ul {
+                padding-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Mi Tienda</a>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="main-content-wrapper">
+        <div class="product-detail-container">
+            <div class="product-image-column">
+                <img src="imagenes_absoluto/balsamos_naturales.jpg" alt="Imagen completa de Bálsamos Naturales">
+            </div>
+            <div class="product-info-column">
+                <h2>Bálsamos Naturales</h2>
+                <p>Nuestros bálsamos naturales son el secreto mejor guardado de la naturaleza, pequeños tesoros que acarician tu piel y revitalizan tus sentidos. Formulados con ingredientes puros y esencias botánicas, están diseñados para brindarte bienestar, relajación y una piel irresistiblemente mimada. Descubre la magia de la naturaleza en cada aplicación.</p>
+
+                <div class="aroma-list-container">
+                    <h3>Variedades y Propiedades:</h3>
+                    <ul class="balsam-types">
+                        <li>
+                            <h4>Perfumes.absoluto Spray Áurico Natural - ARMONÍA</h4>
+                            <p>Recomendado para pulverizar sobre el cuerpo y los ambientes, promoviendo la limpieza energética y la protección.</p>
+                            <ul>
+                                <li>**Incienso:** Limpieza de Energía y Protección</li>
+                                <li>**Sándalo:** Atrae el Éxito, la Abundancia y Prosperidad</li>
+                                <li>**Mirra:** Protector, muy usado en meditación y Sanación.</li>
+                                <li>**Ruda:** Para la Envidia.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Bálsamos Naturales (corporales) - RELAX - PLENITUD</h4>
+                            <p>Ideal para relajarse, realizar masajes relajantes y descontracturantes. Ayuda a combatir la ansiedad y el estrés.</p>
+                            <ul>
+                                <li>**Lavanda:** Combate Ansiedad, Estrés e Insomnio.</li>
+                                <li>**Geranio:** Regenerador celular, equilibrio emocional.</li>
+                                <li>**Tea Tree:** Antiséptico, Analgésico y Desinflamatorio.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>Bálsamos Naturales (corporales) - REVITAL</h4>
+                            <p>Recomendado para mantenerte atento, despierto y fuerte físicamente, ideal para momentos de concentración y estudio.</p>
+                            <ul>
+                                <li>**Romero:** Alivia afecciones musculares y dolores de articulaciones.</li>
+                                <li>**Menta:** Combate el cansancio físico y mental.</li>
+                                <li>**Limón:** Favorece la Concentración y creatividad (recomendado para el estudio).</li>
+                                <li>**Eucalipto:** Gran Vigorizante, activa la circulación y Renueva Energías.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mi Tienda de Productos. Todos los derechos reservados.</p>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Opcional: Cierra el menú si se hace clic fuera de él
+            document.addEventListener('click', function(event) {
+                if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Opcional: Cierra el menú si se redimensiona a un tamaño de escritorio
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
+</body>
+</html>

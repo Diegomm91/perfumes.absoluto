@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi Tienda de Productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Inicio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section" id="hero">
+        <div class="hero-content">
+            <h1>¡Bienvenido a Perfumeres Absoluto!</h1>
+            <p>Descubre nuestra selección de productos increíbles y encuentra lo que buscas.</p>
+            <a href="productos.html" class="btn">Explorar Productos</a>
+        </div>
+    </div>
+
+    <div class="main-content-wrapper">
+
+        <div class="content-section">
+            <h2>Quiénes Somos</h2>
+            <p>En Perfumes Absoluto, creemos en el poder de la fragancia para transformar ambientes y elevar el espíritu. Nacimos de la pasión por crear experiencias sensoriales únicas, ofreciéndote sahumerios y difusores que no solo perfuman tu hogar, sino que también te invitan a un viaje de bienestar y armonía.
+
+Cada uno de nuestros productos es cuidadosamente seleccionado, buscando la más alta calidad en sus ingredientes y la belleza en su diseño. Nos inspiramos en la naturaleza y en la sabiduría ancestral para ofrecerte aromas que evocan paz, energía, alegría o relajación, adaptándose a cada momento de tu día y a cada rincón de tu espacio.
+
+Somos más que una tienda de sahumerios y difusores; somos tus aliados en la búsqueda de un ambiente que refleje tu esencia y te invite a conectar contigo mismo. Te invitamos a explorar nuestro universo aromático y a descubrir cómo una simple fragancia puede cambiarlo todo.
+
+¡Gracias por elegirnos para perfumar tu vida!</p>
+            </div>
+
+        <div class="content-section">
+            <h2>Algunos de Nuestros Productos Más Populares</h2>
+            <p>Una pequeña muestra de lo que te espera en nuestra sección completa de productos.</p>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="imagenes_absoluto/difusores.jpg" alt="Difusores">
+                    <h3>Difusores de ambiente</h3>
+                    <p>Difusores para ambiente de  100ml con varillas de rattan se pueden usar para difusor de auto y para humificadores eléctricos.</p>
+                    <a href="productos.html" class="buy-btn">Ver Producto</a>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes_absoluto/cocina_porta_sahumerios.jpg" alt="Porta Sahumerios">
+                    <h3>Cocina Porta Sahumerios</h3>
+                    <p>Cocinas de lena de epoca pero para tus sahumerios favoritos.</p>
+                    <a href="productos.html" class="buy-btn">Ver Producto</a>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes_absoluto/sahumerios.jpg" alt="Sahumerios">
+                    <h3>Sahumerios naturales</h3>
+                    <p>Los mejores aromas en tus sahumerios favorios.</p>
+                    <a href="productos.html" class="buy-btn">Ver Producto</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="productos.html" class="btn">Ver Todos los Productos</a>
+            </div>
+        </div>
+
+    </div> <footer>
+        <p>&copy; 2025 Mi Tienda de Productos. Todos los derechos reservados.</p>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Opcional: Cierra el menú si se hace clic fuera de él
+            document.addEventListener('click', function(event) {
+                if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Opcional: Cierra el menú si se redimensiona a un tamaño de escritorio
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
+</body>
+</html>

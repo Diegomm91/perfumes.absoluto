@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salamandra Artesanal - Detalles del Producto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para la página de detalles del producto (reutilizados y ajustados) */
+        .product-detail-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .product-image-column {
+            flex: 1;
+            min-width: 300px; /* Asegura un ancho mínimo para la columna de imagen */
+            padding-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea la imagen en la parte superior */
+        }
+
+        .product-image-column img {
+            max-width: 100%; /* La imagen ocupa todo el ancho de su columna */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-info-column {
+            flex: 1;
+            min-width: 300px; /* Asegura un ancho mínimo para la columna de info */
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .product-info-column h2 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 15px;
+            text-align: left; /* Alinea el título a la izquierda */
+        }
+
+        .product-info-column p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            text-align: left; /* Alinea el párrafo a la izquierda */
+        }
+
+        /* Media query para hacerlo responsive */
+        @media (max-width: 768px) {
+            .product-detail-container {
+                flex-direction: column; /* Apila las columnas en pantallas pequeñas */
+            }
+            .product-image-column {
+                padding-right: 0;
+                margin-bottom: 20px;
+                align-items: center; /* Centra la imagen en pantallas pequeñas */
+            }
+            .product-info-column {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Mi Tienda</a>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <div class="main-content-wrapper">
+        <div class="product-detail-container">
+            <div class="product-image-column">
+                <img src="imagenes_absoluto/salamndra_artesanal.jpg" alt="Imagen completa de Salamandra Artesanal">
+            </div>
+            <div class="product-info-column">
+                <h2>Salamandra Artesanal: Porta Sahumerios de Hierro Reciclado</h2>
+                <p>Descubre la originalidad y el encanto rústico de nuestro porta sahumerios Salamandra, una pieza única realizada artesanalmente con hierro reciclado. Este diseño robusto y distintivo no solo cumple su función práctica, sino que también se convierte en un elemento decorativo con carácter, ideal para añadir un toque bohemio o industrial a cualquier espacio. Cada pieza es un testimonio de creatividad y sostenibilidad.</p>
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mi Tienda de Productos. Todos los derechos reservados.</p>
+    </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Opcional: Cierra el menú si se hace clic fuera de él
+            document.addEventListener('click', function(event) {
+                if (!navLinks.contains(event.target) && !menuToggle.contains(event.target) && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            // Opcional: Cierra el menú si se redimensiona a un tamaño de escritorio
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>
+</body>
+</html>
