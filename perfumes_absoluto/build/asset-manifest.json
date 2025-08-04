@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/perfumes.absoluto/static/css/main.7461a7de.css",
+    "main.css": "/perfumes.absoluto/static/css/main.41358f20.css",
     "main.js": "/perfumes.absoluto/static/js/main.1080bd25.js",
     "static/media/imagen_fondo.jpg": "/perfumes.absoluto/static/media/imagen_fondo.02a60cd7851b39740e28.jpg",
     "index.html": "/perfumes.absoluto/index.html",
-    "main.7461a7de.css.map": "/perfumes.absoluto/static/css/main.7461a7de.css.map",
+    "main.41358f20.css.map": "/perfumes.absoluto/static/css/main.41358f20.css.map",
     "main.1080bd25.js.map": "/perfumes.absoluto/static/js/main.1080bd25.js.map"
   },
   "entrypoints": [
-    "static/css/main.7461a7de.css",
+    "static/css/main.41358f20.css",
     "static/js/main.1080bd25.js"
   ]
 }
