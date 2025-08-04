@@ -2,7 +2,7 @@
   "name": "perfumes-absoluto",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://elpib.github.io/perfumes_absoluto",
+  "homepage": "https://diegomm91.github.io/perfumes.absoluto",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
