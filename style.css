@@ -95,6 +95,18 @@ body:not(#index-page) .hero {
     margin-top: 0;
 }
 
+.product-image {
+    width: 100%; /* O un tamaño fijo como 250px */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card {
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
 /* Media Queries para diseño responsivo */
 @media (max-width: 768px) {
     header {
