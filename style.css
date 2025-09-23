@@ -176,3 +176,24 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.view-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-more-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #fff; /* Borde blanco para que sea visible */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-more-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo sutil al pasar el ratón */
+    color: #fff;
+}
