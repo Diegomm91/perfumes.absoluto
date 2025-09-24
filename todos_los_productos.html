@@ -20,77 +20,8 @@
     <main>
         <section id="todos-los-productos" class="products-section">
             <h2>Todos Nuestros Productos</h2>
-            <div class="product-cards">
-                <div class="card">
-                    <img src="imagenes_absoluto/perfumes_imitaciones.jpg" alt="Perfume Floral" class="product-image">
-                    <h3>Perfume Floral</h3>
-                    <p>Una fragancia delicada con notas de jazmín y rosas, ideal para el día a día.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/mohai.jpg" alt="Perfume Amaderado" class="product-image">
-                    <h3>Perfume Amaderado</h3>
-                    <p>Un aroma profundo y misterioso con toques de sándalo y cedro, perfecto para la noche.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/difusores.jpg" alt="Perfume Cítrico" class="product-image">
-                    <h3>Perfume Cítrico</h3>
-                    <p>Frescura y energía con esencias de limón y bergamota, ideal para cualquier ocasión.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/aceites_esenciales.jpg" alt="Aceites Esenciales" class="product-image">
-                    <h3>Aceites Esenciales</h3>
-                    <p>Puros y naturales, perfectos para aromaterapia y bienestar.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/balsamos_naturales.jpg" alt="Bálsamos Naturales" class="product-image">
-                    <h3>Bálsamos Naturales</h3>
-                    <p>Hidratación profunda con ingredientes orgánicos.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/cocina_porta_sahumerios.jpg" alt="Porta Sahumerios de Cocina" class="product-image">
-                    <h3>Porta Sahumerios de Cocina</h3>
-                    <p>Diseño único para tu espacio culinario.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/difusotes_auto.jpg" alt="Difusores para Auto" class="product-image">
-                    <h3>Difusores para Auto</h3>
-                    <p>Mantén tu coche fresco con tus aromas favoritos.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/perfumes_textiles_spray.jpg" alt="Perfumes Textiles" class="product-image">
-                    <h3>Perfumes Textiles</h3>
-                    <p>Refresca tus prendas y ambientes con un toque especial.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/porta_sahumerios.jpg" alt="Porta Sahumerios" class="product-image">
-                    <h3>Porta Sahumerios</h3>
-                    <p>Diseños variados para tus momentos de relajación.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/replica_salamandra_orelli.jpg" alt="Réplica Salamandra Orelli" class="product-image">
-                    <h3>Réplica Salamandra Orelli</h3>
-                    <p>Una pieza de arte única para tu hogar.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/sahumador_ceramica.jpg" alt="Sahumador de Cerámica" class="product-image">
-                    <h3>Sahumador de Cerámica</h3>
-                    <p>Ideal para tus rituales de limpieza energética.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/sahumerios.jpg" alt="Sahumerios" class="product-image">
-                    <h3>Sahumerios</h3>
-                    <p>Variedad de aromas para crear ambientes únicos.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/sahumeros_tibetanos.jpg" alt="Sahumerios Tibetanos" class="product-image">
-                    <h3>Sahumerios Tibetanos</h3>
-                    <p>Tradición y misticismo en cada varilla.</p>
-                </div>
-                <div class="card">
-                    <img src="imagenes_absoluto/salamndra_artesanal.jpg" alt="Salamandra Artesanal" class="product-image">
-                    <h3>Salamandra Artesanal</h3>
-                    <p>Hecha a mano con detalles que encantan.</p>
-                </div>
+            <div class="product-cards" id="product-list">
+                <!-- Los productos se renderizarán aquí con JavaScript -->
             </div>
         </section>
     </main>
@@ -98,5 +29,13 @@
     <footer>
         <p>&copy; 2025 Perfumes Absoluto. Todos los derechos reservados.</p>
     </footer>
+    <div id="aromaModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <ul id="aromaList"></ul>
+        </div>
+    </div>
+    <script src="productos.js"></script>
 </body>
 </html>
