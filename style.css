@@ -88,15 +88,12 @@ body:not(#index-page) .hero {
     width: 300px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     text-align: left;
+    color: #000; /* Color de las letras de la card a negro */
 }
 
 .card h3 {
     color: #007bff;
     margin-top: 0;
-}
-
-.card p {
-    color: #000; /* Color de las descripciones a negro */
 }
 
 .product-image {
