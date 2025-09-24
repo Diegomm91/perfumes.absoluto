@@ -95,6 +95,10 @@ body:not(#index-page) .hero {
     margin-top: 0;
 }
 
+.card p {
+    color: #000; /* Color de las descripciones a negro */
+}
+
 .product-image {
     width: 100%; /* O un tamaño fijo como 250px */
     height: 200px; /* Altura fija para todas las imágenes */
